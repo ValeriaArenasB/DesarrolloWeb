@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./estilos.css" />
+    <script src="./script.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <h1>DOMINO'S</h1>
+    </header>
+
+    <form id="formUser">
+      <fieldset>
+        <legend>Realiza tu pedido</legend>
+
+        <label for="txtnombre">Nombre:</label>
+        <input
+          type="text"
+          placeholder="Nombre"
+          name="nombre"
+          id="txtnombre"
+          required 
+          minlength="3"/>
+
+        <label for="txtcorreo">Correo:</label>
+        <input
+          type="email"
+          placeholder="correo"
+          name="correo"
+          id="txtcorreo"
+          required />
+
+        <label for="selectCiudad">Nombre Ciudad:</label>
+        <input list="selectCiudad" name="ciudad" 
+        id="selectCiudad"/>
+        <datalist id="selectCiudad">
+          <option value="Bg">Bogota</option>
+          <option value="Md">Medellin</option>
+          <option value="Cali"></option>
+        </datalist>
+
+        <label for="selectPizza">Elige tu pizza:</label>
+        <select name="pizza" id="selectPizza">
+          <option value="Margarita">Margarita</option>
+          <option value="Napolitana">Napolitana</option>
+          <option value="Hawaiana">Hawaiana</option>
+        </select>
+
+        <strong>Elige el postre:</strong>
+        <div class="horizontal">
+          <label for="chocolate">Chocolate</label>
+          <input type="radio" name="postre" id="chocolate" value="chocolate" />
+          <label for="frutilla">Frutilla</label>
+          <input type="radio" name="postre" id="frutilla" value="frutilla" />
+          <label for="fresa">Fresa</label>
+          <input type="radio" name="postre" id="fresa" value="fresa" />
+        </div>
+
+        <strong>Elige la bebida:</strong>
+        <div class="horizontal">
+          <label for="agua">Agua</label>
+          <input type="checkbox" name="agua" id="agua" value="yes" />
+          <label for="coca">Coca</label>
+          <input type="checkbox" name="cocacola" id="coca" value="yes" />
+          <label for="sprite">Sprite</label>
+          <input type="checkbox" name="sprite" id="sprite" value="yes" />
+        </div>
+
+        <button type="submit">Enviar</button>
+      </fieldset>
+    </form>
+  </body>
+</html>
